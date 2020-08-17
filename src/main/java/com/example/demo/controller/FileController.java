@@ -27,7 +27,9 @@ public class FileController {
 	 * 文件存储路径，可以自定义,我存到的是项目中的image中
 	 * 登陆地址：localhost:8080/js/upload.html
 	 */
-	private static final  String filePath="G:\\study_tool\\maven_workspace\\demo\\src\\main\\resources\\static\\image\\";
+//	private static final  String filePath="G:\\study_tool\\maven_workspace\\demo\\src\\main\\resources\\static\\image\\";
+	
+	private static final  String filePath="G:\\study_tool\\maven_workspace\\images";
 	/**
 	 * MultipartFile对象的transferTo的效率和操作要比原先的FileOutStream方便和高效
 	 * @param file

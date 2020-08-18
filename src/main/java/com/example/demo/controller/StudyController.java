@@ -49,6 +49,7 @@ public class StudyController {
 			params.clear();
 			params.put("cityId", cityId);
 			params.put("userId", userId);
+			System.out.println("热部署输出cityId"+cityId+",热部署输出userId"+userId);
 			return params;
 			
 		}

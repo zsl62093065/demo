@@ -26,8 +26,9 @@ public class DemoApplication {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
+		
 	}
-	
+	 
 	/**
 	 * 设置上传文件的类型
 	 * 注意MultipartConfigElement中的方法MaxFileSize和MaxRequestSize都是DataSize中的类型，需要转换，可以用ctrl来查看MultipartConfigFactory和DataSize中的方法

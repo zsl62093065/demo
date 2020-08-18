@@ -50,6 +50,7 @@ public class StudyController {
 			params.put("cityId", cityId);
 			params.put("userId", userId);
 			System.out.println("热部署输出cityId"+cityId+",热部署输出userId"+userId);
+			System.out.println("热加载3");
 			return params;
 			
 		}

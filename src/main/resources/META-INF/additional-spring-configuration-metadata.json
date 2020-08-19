@@ -8,5 +8,15 @@
     "name": "web.upload-path",
     "type": "java.lang.String",
     "description": "文件上传路径"
+  },
+  {
+    "name": "test.name",
+    "type": "java.lang.String",
+    "description": "A description for 'test.name'"
+  },
+  {
+    "name": "test.domain",
+    "type": "java.lang.String",
+    "description": "A description for 'test.domain'"
   }
 ]}

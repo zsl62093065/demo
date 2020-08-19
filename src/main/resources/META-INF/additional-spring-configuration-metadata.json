@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "web.file.path",
+    "type": "java.lang.String",
+    "description": "文件注入路径"
+  },
+  {
+    "name": "web.upload-path",
+    "type": "java.lang.String",
+    "description": "文件上传路径"
+  }
+]}

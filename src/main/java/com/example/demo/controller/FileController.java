@@ -6,6 +6,8 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.domian.JsonData;
 
 @Controller
+@PropertySource("classpath:application.properties")
 public class FileController {
 
 	
@@ -26,10 +29,13 @@ public class FileController {
 	/**
 	 * 文件存储路径，可以自定义,我存到的是项目中的image中
 	 * 登陆地址：localhost:8080/js/upload.html
+	 * filePath 是文件注入路径
 	 */
 //	private static final  String filePath="G:\\study_tool\\maven_workspace\\demo\\src\\main\\resources\\static\\image\\";
+//	private static final  String filePath="G:\\study_tool\\maven_workspace\\images\\";
 	
-	private static final  String filePath="G:\\study_tool\\maven_workspace\\images";
+	@Value("${web.file.path}")
+	private   String filePath;
 	/**
 	 * MultipartFile对象的transferTo的效率和操作要比原先的FileOutStream方便和高效
 	 * @param file
@@ -39,6 +45,8 @@ public class FileController {
 	@RequestMapping(value="upload")
 	@ResponseBody
 	public JsonData upload(@RequestParam("head_img")MultipartFile file,HttpServletRequest request) {
+		
+		System.out.println("配置文件注入打印，文件路径为："+filePath);
 		
 		//获取用户名
 		String name=request.getParameter("name");
